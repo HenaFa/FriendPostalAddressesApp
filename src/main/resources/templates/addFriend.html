@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Friendlist</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+</head>
+
+<body>
+	<h1>Add Friend</h1>
+	<div>
+		<form th:object="${friend}" th:action="@{save}" action="#" method="post">
+			<label for="firstname">Firstname</label> <input type="text" id="firstname" th:field="*{firstname}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="lastname">Lastname</label> <input type="text" id="lastname" th:field="*{lastname}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="address">Address</label> <input type="text" th:field="*{address}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+
+
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" value="Save"></input>
+		</form>
+	</div>
+</body>
+
+</html>

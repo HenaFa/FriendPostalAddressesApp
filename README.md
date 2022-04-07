@@ -1,0 +1,4 @@
+# FriendPostalApp
+# FriendPostalAddressesApp
+# FriendPostalAddressesApp
+# FriendPostalAddressesApp
