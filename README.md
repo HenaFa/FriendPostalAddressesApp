@@ -1,4 +1,3 @@
-# FriendPostalApp
-# FriendPostalAddressesApp
-# FriendPostalAddressesApp
-# FriendPostalAddressesApp
+# FriendPostalAddressApp
+Ohjelma joka näyttää kaverisi osotteita
+
