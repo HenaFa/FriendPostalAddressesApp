@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Friendlist</title>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"
-	th:href="@{/css/bootstrap.min.css}" />
+<head>
+	<meta charset="UTF-8">
+	<title>Friendlist</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
 </head>
+
 <body>
 	<h1>Friends Postal Addresses</h1>
-	<table class="table table-striped" >
+	<table class="table table-striped">
 		<tr>
 			<th>Firstname</th>
 			<th>Lastname</th>
 			<th>Address</th>
-			
+
 
 
 		</tr>
@@ -23,12 +24,18 @@
 			<td th:text="${friend.firstname}"></td>
 			<td th:text="${friend.lastname}"></td>
 			<td th:text="${friend.address}"></td>
-			
+
 
 			<td><a class="btn btn-danger" th:href="@{/delete/{id}(id=${friend.id})}">Delete</a></td>
 			<td><a class="btn btn-info" th:href="@{/edit/{id}(id=${friend.id})}">Edit</a></td>
 		</tr>
 	</table>
 	<a class="btn btn-success" href="/add">Add Friend</a>
+	<br>
+	<br>
+	<form th:action="@{/doLogout}" method="post">
+		<input type="submit" value="Sign Out" />
+	</form>
 </body>
+
 </html>
