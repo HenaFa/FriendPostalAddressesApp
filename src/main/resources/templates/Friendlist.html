@@ -25,9 +25,10 @@
 			<td th:text="${friend.lastname}"></td>
 			<td th:text="${friend.address}"></td>
 
-
-			<td><a class="btn btn-danger" th:href="@{/delete/{id}(id=${friend.id})}">Delete</a></td>
-			<td><a class="btn btn-info" th:href="@{/edit/{id}(id=${friend.id})}">Edit</a></td>
+			<td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${friend.id})}"
+					class="btn btn-xs btn-danger">Delete</a></td>
+			<td sec:authorize="hasRole('ADMIN')"><a th:href="@{/edit/{id}(id=${friend.id})}"
+					class="btn btn-info">Edit</a></td>
 		</tr>
 	</table>
 	<a class="btn btn-success" href="/add">Add Friend</a>
